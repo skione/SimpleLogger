@@ -16,12 +16,12 @@ class Log {
      * @var resource
      * @access public 
      */
-  public $file;
+	public $file;
 
     /**
-     * Short description for function
+     * Constructor
      * 
-     * @param string $logfile Parameter description (if any) ...
+     * @param string $logfile Optional path to log file
      * @return void  
      * @access public
      */
@@ -31,16 +31,14 @@ class Log {
 		if (!defined('_LOG_LEVEL_')) {
 
     /**
-     * Description for define
+     * Define the log level if its not set
      */
 			define('_LOG_LEVEL_', 3);
 		}
 	}
 
     /**
-     * Short description for function
-     * 
-     * Long description (if any) ...
+     * Close the file when your done
      * 
      * @return void  
      * @access public
@@ -51,11 +49,9 @@ class Log {
 	}
 
     /**
-     * Short description for function
+     * Used to add date/time to log entries
      * 
-     * Long description (if any) ...
-     * 
-     * @return string  Return description (if any) ...
+     * @return string  Return Current date/time
      * @access private
      */
 	private function _currentDateTime()
@@ -64,11 +60,9 @@ class Log {
 	}
 
     /**
-     * Short description for function
+     * Does the actual writing
      * 
-     * Long description (if any) ...
-     * 
-     * @param unknown $message Parameter description (if any) ...
+     * @param string $message Message to log
      * @return void   
      * @access private
      */
@@ -79,11 +73,9 @@ class Log {
 	}
 
     /**
-     * Short description for function
+     * Creates a fatal log entry
      * 
-     * Long description (if any) ...
-     * 
-     * @param string $message Parameter description (if any) ...
+     * @param string $message Message to log
      * @return void  
      * @access public
      */
@@ -96,11 +88,9 @@ class Log {
 	}
 
     /**
-     * Short description for function
+     * Creates an info log entry
      * 
-     * Long description (if any) ...
-     * 
-     * @param string $message Parameter description (if any) ...
+     * @param string $message Message to log
      * @return void  
      * @access public
      */
@@ -113,11 +103,9 @@ class Log {
 	}
 
     /**
-     * Short description for function
+     * Creates a debug log entry
      * 
-     * Long description (if any) ...
-     * 
-     * @param string $message Parameter description (if any) ...
+     * @param string $message Message to log
      * @return void  
      * @access public
      */
