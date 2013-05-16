@@ -1,0 +1,4 @@
+SimpleLogger
+============
+
+Simple Logging Class
